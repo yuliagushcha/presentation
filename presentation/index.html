@@ -1,49 +1,128 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>CSS Grid Layout</h1>
+			</section>
+			<section>
+				<h2>CSS Grid Layout</h2>
+				<h4>(aka "Grid")</h4>
+				<span>is a two-dimensional grid-based layout system that aims to do nothing less than completely
+					change the way we design grid-based user interfaces.</span>
+			</section>
+			<section>
+				<section>
+					<h2>Basics <br> and <br> Browser Support</h2>
+				</section>
+				<section>
+					<h3>To get started</h3>
+					<ul>
+						<li>to define with <code
+								class="hljs codeLine"><span class="hljs-keyword">display: </span>grid<span class="hljs-comment">;</span></code>
+						</li>
+						<li>set column size with <code class="hljs hljs-keyword codeLine">grid-template-columns</code>
+						</li>
+						<li>set row size with <code class="hljs hljs-keyword codeLine">grid-template-rows</code>
+						</li>
+						<li>place child elements with <code class="hljs hljs-keyword codeLine">grid-column</code> and
+							<code class="hljs hljs-keyword codeLine">grid-row</code></li>
+					</ul>
+				</section>
+				<section>
+					<img src="./assets/images/BrowserSupport.png" alt="Browser Support">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Important Terminology</h2>
+				</section>
+				<section>
+					<h3>Grid Container</h3>
+					<pre><code>
+<div class="container">
+  <div class="item item-1"></div>
+  <div class="item item-2"></div>
+  <div class="item item-3"></div>
+</div>
+					</code></pre>
+				</section>
+				<section>
+					<h3>Grid item</h3>
+					<pre><code>
+<div class="container">
+  <div class="item"></div> 
+  <div class="item">
+  	<p class="sub-item"></p>
+  </div>
+  <div class="item"></div>
+</div>
+					</code></pre>
+				</section>
+				<section>
+					<h3>Grid Line</h3>
+					<img src="assets/images/gridLine.svg" alt="grid line" width="500"
+						style="border: none; background: none;">
+				</section>
+				<section>
+					<h3>Grid Track</h3>
+					<img src="assets/images/gridTrack.svg" alt="grid line" width="500"
+						style="border: none; background: none;">
+				</section>
+				<section>
+					<h3>Grid Cell</h3>
+					<img src="assets/images/gridCell.svg" alt="grid line" width="500"
+						style="border: none; background: none;">
+				</section>
+				<section>
+					<h3>Grid Area</h3>
+					<img src="assets/images/gridArea.svg" alt="grid line" width="500"
+						style="border: none; background: none;">
+				</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
 </html>

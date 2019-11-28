@@ -153,7 +153,8 @@ body {
 
 .reveal code {
   font-family: monospace;
-  text-transform: none; }
+  text-transform: none;
+  border-radius: 5px; }
 
 .reveal pre code {
   display: block;
@@ -161,6 +162,11 @@ body {
   overflow: auto;
   max-height: 400px;
   word-wrap: normal; }
+
+.reveal code.codeLine {
+  display: inline-block;
+  font-size: 30px;
+  padding: 0; }
 
 .reveal table {
   margin: auto;
