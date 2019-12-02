@@ -64,6 +64,7 @@
 				</section>
 				<section>
 					<h3>Grid Container</h3>
+					<span style="color: gray">the element on which display: grid is applied</span>
 					<pre><code>
 <div class="container">
   <div class="item item-1"></div>
@@ -74,6 +75,7 @@
 				</section>
 				<section>
 					<h3>Grid item</h3>
+					<span style="color: gray">the children of the grid container</span>
 					<pre><code>
 <div class="container">
   <div class="item"></div> 
@@ -86,23 +88,213 @@
 				</section>
 				<section>
 					<h3>Grid Line</h3>
+					<span style="color: gray; font-size: 40px;">the dividing lines that make up the structure of the
+						grid</span>
 					<img src="assets/images/gridLine.svg" alt="grid line" width="500"
 						style="border: none; background: none;">
 				</section>
 				<section>
 					<h3>Grid Track</h3>
+					<span style="color: gray">the space between two adjacent grid lines</span>
 					<img src="assets/images/gridTrack.svg" alt="grid line" width="500"
 						style="border: none; background: none;">
 				</section>
 				<section>
 					<h3>Grid Cell</h3>
+					<span style="color: gray; font-size: 40px;">the space between two<br>adjacent row and two adjacent
+						column grid
+						lines</span>
 					<img src="assets/images/gridCell.svg" alt="grid line" width="500"
 						style="border: none; background: none;">
 				</section>
 				<section>
 					<h3>Grid Area</h3>
+					<span style="color: gray">the total space surrounded by four grid lines</span>
 					<img src="assets/images/gridArea.svg" alt="grid line" width="500"
 						style="border: none; background: none;">
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Properties for the Grid Container</h2>
+				</section>
+				<section>
+					<h3>Display</h3>
+					<pre><code class="hljs">
+.container {
+  display: grid | inline-grid;
+}
+					</code></pre>
+				</section>
+				<section>
+					<h3>Grid-template-columns and<br>grid-template-rows</h3>
+					<pre><code class="hljs">
+.container {
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 25% 100px auto;
+}
+					</code></pre>
+					<pre class="fragment"><code class="hljs">
+.container {
+  grid-template-columns: repeat(3, 20px [col-start]);
+}
+					</code></pre>
+				</section>
+				<section>
+					<span><code><span style="width: 30px; background: indigo; border-radius: 5px;">fr</span></code>
+						unit</span>
+					<pre><code class="hljs">
+.container {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+					</code></pre>
+				</section>
+				<section>
+					<h3>Grid-template-areas</h3>
+					<pre><code class="hljs">
+.item-a {
+  grid-area: header;
+}
+.item-b {
+  grid-area: main;
+}
+.item-c {
+  grid-area: sidebar;
+}
+.item-d {
+  grid-area: footer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+					</code></pre>
+				</section>
+				<section>
+					<h2>grid-template</h2>
+					<pre><code class="hljs">
+.container {
+  grid-template: none | &lt;grid-template-rows&gt; / &lt;grid-template-columns&gt;;
+}
+					</code></pre>
+					<pre class="fragment"><code class="hljs">
+.container {
+  grid-template:
+    [row1-start] "header header header" 25px [row1-end]
+    [row2-start] "footer footer footer" 25px [row2-end]
+    / auto 50px auto;
+}
+					</code></pre>
+				</section>
+				<section>
+					<h2>grid-column-gap and<br>grid-row-gap</h2>
+					<pre><code class="hljs">
+.container {
+  grid-column-gap: &lt;line-size&gt;;
+  grid-row-gap: &lt;line-size&gt;;
+}
+					</code></pre>
+					<img src="assets/images/gridGap.png" alt="grid gap" width="300">
+				</section>
+				<section>
+					<h2>grid-gap</h2>
+					<pre><code>
+.container {
+  grid-gap: &lt;grid-row-gap&gt; &lt;grid-column-gap&gt;;
+}
+					</code></pre>
+				</section>
+				<section>
+					<h3>justify-items</h3>
+					<pre><code>
+.container {
+  justify-items: start | end | center | stretch;
+}
+					</code></pre>
+					<img src="./assets/images/justifyItems.png" alt="justify-items" width="456" style="border: none;">
+				</section>
+				<section>
+					<h3>align-items</h3>
+					<pre><code>
+.container {
+  align-items: start | end | center | stretch;
+}
+					</code></pre>
+					<img src="./assets/images/alignItems.png" alt="align-items" width="456" style="border: none;">
+				</section>
+				<section>
+					<h3>justify-content</h3>
+					<pre><code>
+.container {
+  justify-content: start | end | center | stretch | space-around | space-between | space-evenly;	
+}
+					</code></pre>
+					<div style="display: flex; justify-content: center; align-items: center;">
+						<img src="./assets/images/justifyContent1.png" alt="justify content 1" width="329"
+							style="border: none;">
+						<img src="assets/images/justifyContent2.png" alt="justify content 2" width="456"
+							style="border: none;">
+					</div>
+				</section>
+				<section>
+					<h3>align-content</h3>
+					<pre><code>
+.container {
+	align-content: start | end | center | stretch | space-around | space-between | space-evenly;	
+}
+					</code></pre>
+					<div style="display: flex; justify-content: center; align-items: center;">
+						<img src="./assets/images/alignContent1.png" alt="align content 1" width="329"
+							style="border: none;">
+						<img src="assets/images/alignContent2.png" alt="align content 2" width="471"
+							style="border: none;">
+					</div>
+				</section>
+				<section>
+					<h3>grid-auto-columns and<br>grid-auto-rows</h3>
+					<pre>
+						<code>
+.container {
+  grid-auto-columns: &lt;track-size&gt; ...;
+  grid-auto-rows: &lt;track-size&gt; ...;
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>grid-auto-flow</h3>
+					<pre>
+						<code>
+.container {
+  grid-auto-flow: row | column | row dense | column dense;
+}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>grid</h3>
+					<pre>
+						<code>
+.container {
+    grid-template-rows: 100px 300px;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+}
+						</code>
+					</pre>
+					<pre class="fragment">
+						<code>
+.container {
+    grid: 100px 300px / auto-flow 200px;
+}
+						</code>
+					</pre>
 				</section>
 			</section>
 		</div>
