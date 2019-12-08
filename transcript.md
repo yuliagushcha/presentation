@@ -124,10 +124,10 @@
 > And the last property is ***place-self***, that sets both the align-self and justify-self properties in a single declaration.
 
 > #### Slide 6.8
-> Let's consider a small example of grid. On the slide you see his main layout. 
+> Let's consider a small example of grid. On the slide you see its main layout. 
 
 > #### Slide 6.9
-> Next, we set the grid-area property for each item, the properties of the grid container, such as display: flex, grid-template-areas and grid-gap, and some properties of its design. Now let's look at the result. 
+> Next, we set the grid-area property for each item, the properties of the grid container, such as display: grid, grid-template-areas and grid-gap, and some properties of its design. Now let's look at the result. 
 
 > #### Slide 6.10
 > We see that the header occupies the entire first row, the menu occupies the next two rows of the first column, main and right are distributed on the remaining second row, and footer - the remaining third row.
